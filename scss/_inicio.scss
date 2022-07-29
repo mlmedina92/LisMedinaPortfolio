@@ -1,0 +1,153 @@
+// Desktop
+
+#inicio {
+	background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .7)), url('../img/pc.jpg');
+	background-size: cover;
+	background-position: center center;
+	height: 100vh;
+	.contenido {
+		header {
+			background-color: rgba(0, 0, 0, .8);
+			position: fixed;
+			width: 100%;
+			z-index: 100;
+			top: 0;
+			.contenido-header {
+				max-width: 1100px;
+				margin: auto;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 10px 20px;
+				h1 {
+					text-align: center;
+					color: pink;
+				}
+				nav {
+					ul {
+						list-style: none;
+						display: flex;
+						align-items: center;
+						li {
+							a {
+								text-decoration: none;
+								color: #fff;
+								margin: 0 12px;
+								font-weight: 400;
+								transition: .5s;
+							}
+						}
+						a {
+							&:hover {
+								color: pink;
+							}
+						}
+					}
+				}
+				.redes {
+					a {
+						text-decoration: none;
+						color: #fff;
+						display: inline-block;
+						margin-left: 10px;
+						transition: .5s;
+						&:hover {
+							color: pink;
+						}
+					}
+				}
+				.seleccionado {
+					color: pink;
+				}
+			}
+		}
+		.presentacion {
+			max-width: 1100px;
+			height: 100vh;
+			margin: auto;
+			color: #fff;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			.bienvenida {
+				font-size: 16px;
+				margin-bottom: 20px;
+				text-transform: uppercase;
+				letter-spacing: 5px;
+			}
+			h2 {
+				font-size: 55px;
+				margin-bottom: 25px;
+				text-align: center;
+			}
+			span {
+				font-size: 30px;
+				color: pink;
+			}
+			.descripcion {
+				max-width: 700px;
+				margin: 25px auto;
+				font-size: 18px;
+				text-align: center;
+			}
+			a {
+				text-decoration: none;
+				display: inline-block;
+				margin: 25px;
+				padding: 20px 25px;
+				border: 2px solid #fff;
+				font-weight: bold;
+				text-transform: uppercase;
+				color: #fff;
+				transition: all 0.5s ease-out;
+				&:hover {
+					background-color: pink;
+				}
+			}
+		}
+	}
+}
+#icono-nav {
+	color: #fff;
+	display: none;
+}
+
+
+// MQ
+@media screen and (max-width:800px) {
+	.redes {
+		display: none;
+	}
+	nav {
+		display: none;
+	}
+	nav.responsive {
+		display: block;
+		background-color: rgba(0, 0, 0, .8);
+		width: 100%;
+		position: absolute;
+		top: 48px;
+		left: 0;
+		padding: 10px;
+		ul {
+			display: block !important;
+			text-align: center;
+			li {
+				margin: 5px 0;
+			}
+		}
+	}
+	#icono-nav {
+		display: block;
+	}
+	#inicio {
+		.contenido {
+			.presentacion {
+				h2 {
+					font-size: 40px;
+				}
+			}
+		}
+	}
+}
